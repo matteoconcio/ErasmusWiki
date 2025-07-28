@@ -10,7 +10,7 @@ Il sito fornisce informazioni pratiche e aggiornate su:
 
 ## 🔗 Online
 
-👉 [Visualizza il sito](https://github.com/matteoconcio/ErasmusWiki)
+👉 [Visualizza il sito](https://matteoconcio.github.io/ErasmusWiki/)
 
 ## 👨‍💻 Autore
 
