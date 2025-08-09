@@ -1,60 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guida Erasmus UCAM</title>
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guida Erasmus UCAM 2025/2026</title>
+  <meta name="description" content="Guida rapida e completa per studenti Erasmus alla UCAM: alloggi, documenti, vita studentesca e contatti utili." />
+  <meta name="theme-color" content="#004379" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Leaflet CSS (senza integrity) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
-
   <header>
-    <div class="header-container">
-      <img src="./assets/logo.png" alt="Logo Università" class="logo" />
-      <h1 class="header-title">Guida Erasmus UCAM 2025/2026</h1>    </div>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#alloggio">Alloggio</a></li>
-        <li><a href="#documenti">Documenti</a></li>
-        <li><a href="#vita">Vita Studentesca</a></li>
-        <li><a href="#contatti">Contatti</a></li>
-      </ul>
+    <nav class="nav container" aria-label="Principale">
+      <div class="brand">Guida Erasmus UCAM</div>
+      <div class="spacer"></div>
+      <div class="pills" role="list">
+        <a class="pill" href="#alloggio">Alloggio</a>
+        <a class="pill" href="#documenti">Documenti</a>
+        <a class="pill" href="#vita">Vita Studentesca</a>
+        <a class="pill" href="#contatti">Contatti</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section id="introduzione">
-      <h2>Benvenuti studenti Erasmus!</h2>
-      <p>Questa guida vi aiuterà a orientarvi all'inizio della vostra esperienza presso la UCAM. Troverete informazioni utili su alloggi, documenti, vita universitaria e contatti essenziali.</p>
+  <main class="container">
+    <section id="alloggio" class="card">
+      <h2>Alloggio</h2>
+      <p>Consigli su dove cercare casa a Murcia, zone consigliate e portali utili.</p>
     </section>
 
-    <section id="alloggio">
-      <h2>Alloggio 🏠</h2>
-      <p>Informazioni sulle residenze universitarie, affitti privati e consigli su dove cercare casa.</p>
+    <!-- MAPPA ALLOGGI -->
+    <section id="mappa-alloggi" class="card">
+      <h2>Mappa aree consigliate per l’alloggio</h2>
+      <p class="subtitle">
+        Zone orientative dove molti studenti vivono: <strong>Centro</strong>, <strong>La Flota</strong>, <strong>Espinardo/UCAM</strong>.
+        Clicca sulle aree per i dettagli. I confini sono indicativi.
+      </p>
+
+      <div class="map-toolbar" role="group" aria-label="Filtri mappa">
+        <label><input type="checkbox" id="toggle-centro" checked> Centro</label>
+        <label><input type="checkbox" id="toggle-laflota" checked> La Flota</label>
+        <label><input type="checkbox" id="toggle-espinardo" checked> Espinardo / UCAM</label>
+      </div>
+
+      <div id="map" aria-label="Mappa interattiva di Murcia"></div>
+
+      <div class="sites">
+        <h3>Siti utili per cercare alloggio</h3>
+        <ul>
+          <li><a href="https://www.idealista.com/" target="_blank" rel="noopener">Idealista</a> (appartamenti & stanze)</li>
+          <li><a href="https://www.fotocasa.es/" target="_blank" rel="noopener">Fotocasa</a></li>
+          <li><a href="https://www.pisos.com/" target="_blank" rel="noopener">Pisos.com</a></li>
+          <li><a href="https://badi.com/" target="_blank" rel="noopener">Badi</a> (stanze in condivisione)</li>
+          <li><a href="https://www.spotahome.com/" target="_blank" rel="noopener">Spotahome</a></li>
+          <li><a href="https://erasmusu.com/" target="_blank" rel="noopener">Erasmusu</a></li>
+        </ul>
+      </div>
     </section>
 
-    <section id="documenti">
-      <h2>Documenti Necessari 📄</h2>
-      <p>Elenco dei documenti da preparare prima e dopo l’arrivo: Learning Agreement, Certificate of Arrival (o Stay Certificate).</p>
-    </section>
-
-    <section id="vita">
-      <h2>Vita Studentesca (a volte un po' pazza😁) </h2>
-      <p>Eventi, associazioni studentesche, sconti per studenti, trasporti, e attività sociali per vivere al meglio l’esperienza Erasmus.</p>
-    </section>
-
-    <section id="contatti">
-      <h2>Contatti Utili</h2>
-      <ul>
-        <li>Ufficio Erasmus: 1° piano Monastero</li>
-        <li>Gruppo WhatsApp: <a href="https://chat.whatsapp.com/FsNXnxUZZX83ayLvdYxbfl?mode=ac_t" target="_blank">Erasmus UCAM 2025/2026</a></li>
+    <section id="documenti" class="card">
+      <h2>Documenti</h2>
+      <ul class="list">
+        <li>Carta d'identità o passaporto</li>
+        <li>Tessera sanitaria europea</li>
       </ul>
+    </section>
+
+    <section id="vita" class="card">
+      <h2>Vita Studentesca</h2>
+      <p>Eventi, sport e vita sociale a UCAM e Murcia.</p>
+    </section>
+
+    <section id="contatti" class="card">
+      <h2>Contatti</h2>
+      <p>Email ufficio Erasmus: <a href="mailto:erasmus@ucam.edu">erasmus@ucam.edu</a></p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Personal Project by M. Concio (Ing. Informática @ UCAM)</p>
+  <footer class="footer">
+    © <span id="year"></span> Progetto personale
   </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Leaflet JS (senza integrity) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+  <!-- Script mappa -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Centro mappa su Murcia
+      const map = L.map('map', { scrollWheelZoom: true }).setView([37.989, -1.129], 13);
+
+      // Tile layer OSM
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Stili aree (colori UCAM + verde per Espinardo)
+      const styleCentro  = { color: '#004379', weight: 2, fillColor: '#004379', fillOpacity: 0.15 };
+      const styleLaFlota = { color: '#EDAB00', weight: 2, fillColor: '#EDAB00', fillOpacity: 0.18 };
+      const styleEspi    = { color: '#2E7D32', weight: 2, fillColor: '#2E7D32', fillOpacity: 0.18 };
+
+      // Poligoni (confini indicativi)
+      const polyCentro = L.polygon([
+        [37.9935, -1.1410],
+        [37.9935, -1.1220],
+        [37.9845, -1.1215],
+        [37.9825, -1.1335]
+      ], styleCentro).bindPopup('<strong>Centro</strong><br>Vicino a servizi, locali e trasporti. Prezzi più alti.');
+
+      const polyLaFlota = L.polygon([
+        [38.0078, -1.1335],
+        [38.0075, -1.1210],
+        [37.9990, -1.1185],
+        [37.9965, -1.1295]
+      ], styleLaFlota).bindPopup('<strong>La Flota</strong><br>Zona residenziale tranquilla, collegata al centro.');
+
+      const polyEspi = L.polygon([
+        [38.0170, -1.1765],
+        [38.0170, -1.1600],
+        [38.0050, -1.1565],
+        [38.0020, -1.1750]
+      ], styleEspi).bindPopup('<strong>Espinardo / UCAM</strong><br>Comoda per il campus; canoni più bassi.');
+
+      // Layer group per toggle
+      const gCentro  = L.layerGroup([polyCentro]).addTo(map);
+      const gLaFlota = L.layerGroup([polyLaFlota]).addTo(map);
+      const gEspi    = L.layerGroup([polyEspi]).addTo(map);
+
+      // Marker UCAM (indicativo)
+      L.marker([37.988, -1.171]).addTo(map).bindPopup('UCAM (Monasterio de Los Jerónimos)');
+
+      // Toggle via checkbox
+      function toggleLayer(checkboxId, layer) {
+        const cb = document.getElementById(checkboxId);
+        const update = () => cb.checked ? layer.addTo(map) : map.removeLayer(layer);
+        cb.addEventListener('change', update);
+        update();
+      }
+      toggleLayer('toggle-centro', gCentro);
+      toggleLayer('toggle-laflota', gLaFlota);
+      toggleLayer('toggle-espinardo', gEspi);
+
+      // Legenda semplice
+      const legend = L.control({position: 'bottomright'});
+      legend.onAdd = function () {
+        const div = L.DomUtil.create('div', 'legend');
+        div.innerHTML = `
+          <div class="legend-row"><span class="swatch swatch-blue"></span>Centro</div>
+          <div class="legend-row"><span class="swatch swatch-gold"></span>La Flota</div>
+          <div class="legend-row"><span class="swatch swatch-green"></span>Espinardo / UCAM</div>
+        `;
+        return div;
+      };
+      legend.addTo(map);
+    });
+  </script>
 </body>
 </html>
