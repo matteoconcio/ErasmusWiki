@@ -21,18 +21,13 @@
       <div class="pills" role="list">
         <a class="pill" href="#alloggio">Alloggio</a>
         <a class="pill" href="#documenti">Documenti</a>
-        <a class="pill" href="#vita">Vita Studentesca</a>
+        <a class="pill" href="#trasporti">Trasporti</a>
         <a class="pill" href="#contatti">Contatti</a>
       </div>
     </nav>
   </header>
 
   <main class="container">
-    <section id="alloggio" class="card">
-      <h2>Alloggio</h2>
-      <p>Consigli su dove cercare casa a Murcia, zone consigliate e portali utili.</p>
-    </section>
-
     <!-- MAPPA ALLOGGI -->
     <section id="mappa-alloggi" class="card">
       <h2>Mappa aree consigliate per l’alloggio</h2>
@@ -65,24 +60,56 @@
     <section id="documenti" class="card">
       <h2>Documenti</h2>
       <ul class="list">
-        <li>Carta d'identità o passaporto</li>
+        <li>Carta d'identità o passaporto valido</li>
         <li>Tessera sanitaria europea</li>
+        <li>Learning Agreement firmato</li>
+        <li>Certificato di iscrizione all'università italiana</li>
+        <li>Assicurazione viaggio (se richiesta)</li>
+        <li>Certificate of Attendance (da firmare all'arrivo e prima del rientro)</li>
+        <li>Transcript of Records (prima del rientro)</li>
       </ul>
     </section>
 
-    <section id="vita" class="card">
-      <h2>Vita Studentesca</h2>
-      <p>Eventi, sport e vita sociale a UCAM e Murcia.</p>
+
+    <section id="trasporti" class="card">
+      <h2>Trasporti</h2>
+  <ul class="list">
+    <li>
+      <strong>Bus urbani per UCAM:</strong> Linee 39 e 44 dal centro città
+    </li>
+    <li>
+      <strong>Tram per UCAM:</strong> Linea L1B (Tranvía de Murcia) con fermate dal centro città fino a UCAM Los Jerónimos.
+    </li>
+    <li>
+      <strong>Bono Estudiante:</strong> Carta trasporti studenti.
+      <a href="https://tranviademurcia.es" target="_blank"> tranviademurcia.es</a>
+    </li>
+    <li>
+      <strong>Bus Alsa:</strong> Collegamento in bus con le altre città
+    </li>
+    <li>
+      <strong>Treni Renfe:</strong> Collegamento per Madrid, Valencia, Barcellona
+    </li>
+    <li>
+      <strong>BlaBlaCar:</strong> Viaggi economici verso altre città spagnole
+    </li>
+    <li>
+      <strong>Taxi/Uber:</strong> Disponibili, tariffe standard europee
+    </li>
+  </ul>
     </section>
+
+    
 
     <section id="contatti" class="card">
       <h2>Contatti</h2>
-      <p>Email ufficio Erasmus: <a href="mailto:erasmus@ucam.edu">erasmus@ucam.edu</a></p>
+      <p>Ufficio Erasmus: 1° Piano Monastero</p>
+      <p><a href="https://chat.whatsapp.com/FsNXnxUZZX83ayLvdYxbfl?mode=ac_t" target="_blank">Gruppo WhatsApp UCAM 2025/2026</a></p>
     </section>
   </main>
 
   <footer class="footer">
-    © <span id="year"></span> Progetto personale
+    © 2025 by M. CONCIO (Ing. Informática UCAM)
   </footer>
 
   <script>
@@ -115,7 +142,7 @@
         [37.9935, -1.1220],
         [37.9845, -1.1215],
         [37.9825, -1.1335]
-      ], styleCentro).bindPopup('<strong>Centro</strong><br>Vicino a servizi, locali e trasporti. Prezzi più alti.');
+      ], styleCentro).bindPopup('<strong>Centro</strong><br>Vicino a servizi, locali e trasporti. Zona più scelta dagli studenti. ');
 
       const polyLaFlota = L.polygon([
         [38.0078, -1.1335],
@@ -129,7 +156,7 @@
         [38.0170, -1.1600],
         [38.0050, -1.1565],
         [38.0020, -1.1750]
-      ], styleEspi).bindPopup('<strong>Espinardo / UCAM</strong><br>Comoda per il campus; canoni più bassi.');
+      ], styleEspi).bindPopup('<strong>Espinardo / UCAM</strong><br>Comoda per il campus, ma scomoda per il centro città; costi più bassi.');
 
       // Layer group per toggle
       const gCentro  = L.layerGroup([polyCentro]).addTo(map);
