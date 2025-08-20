@@ -5,7 +5,7 @@ Questo progetto è una pagina web dedicata agli studenti Erasmus in arrivo press
 Il sito fornisce informazioni pratiche e aggiornate su:
 - 🏠 Alloggi
 - 📄 Documentazione necessaria
-- 🎓 Vita universitaria
+- 🚃 Trasporti
 - 📞 Contatti utili
 
 ## 🔗 Online
